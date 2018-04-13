@@ -1,0 +1,84 @@
+keep_files: [docs]
+permalink: pretty
+baseurl: ""
+full_name: {{cookiecutter.full_name}}
+project_short_description: {{cookiecutter.project_short_description}}
+project_name: {{cookiecutter.project_name}}
+project_slug: {{cookiecutter.project_slug}}
+version: {{cookiecutter.version}}
+git_username: {{cookiecutter.git_username}}
+git_source: {{cookiecutter.git_source}}
+email: {{cookiecutter.email}}
+open_source_license: {{cookiecutter.open_source_license}}
+
+
+# # # # # # # # # # # # # # # # 
+#  C O N F I G U R A T I O N  #
+# # # # # # # # # # # # # # # # 
+
+#----------------#
+# SOCIAL NETWORK #
+#----------------#
+
+# TWITTER
+# Option : y / your twitter's URL
+# - y = twitter.com/GIT_USERNAME
+twitter: 
+
+# FACEBOOK
+# Option : y / your Facebook's URL
+# - y = 
+facebook: 
+
+# GOOGLE PLUS
+# Option : y / your Google plus' URL
+# - y = 
+googleplus: 
+
+# LINKEDIN
+# Option : y / your Linkedin's URL
+# - y = 
+linkedin: 
+
+# YOUTUBE
+# Option : y / your Youtube's URL
+# - y = 
+youtube: 
+
+
+#-------#
+# TOOLS #
+#-------#
+
+# BLOG
+# Option : y / your BLOG's URLS  
+# - y = jekyll URL = BASEURL/blog
+dev_blog: 
+
+
+# TUTORIAL
+# Option : y / your Tutorial's URLS  
+# - y = jekyll URL = BASEURL/tutorial/
+tutorial: 
+
+# TOOLS
+# Option : y  
+tools: 
+
+# DOCUMENTATION
+# Option : readthedocs / y / your documentation's URLS  
+# - readthedocs URL =  is based on the project_slug
+# - y = jekyll URL = BASEURL/docs/_build/
+documentation: y
+
+
+# CHATROOM
+# Option : slack / gitter / your chat's URL  
+# - Slack URL = PROJECT_SLUG.slack.com
+# - Gitter URL = gitter.im/PROJECT_SLUG
+chat:
+
+
+# MAILCHIMP
+# create and account and add the add the embed link
+embed_mailchimp: 
