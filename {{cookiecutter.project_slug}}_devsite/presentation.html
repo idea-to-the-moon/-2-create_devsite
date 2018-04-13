@@ -1,0 +1,42 @@
+{% raw %}---
+layout: reveal
+
+---
+<section data-background-transition="" data-background="{{site.baseurl}}/assets/reveal/background/Cover.png" align="left">
+	<br><br><br><br><br><br><br>
+	<h2>Title</h2>
+	<h4>Subtitle</h4>
+</section>
+<section data-background="{{site.baseurl}}/assets/reveal/background/General.png" align="left" >
+	
+	<h3><font color="white">Summary</font></h3>
+	<br>
+	- Team
+	- Project
+	- Conclusion
+	- Contact
+</section>
+<section data-background="{{site.baseurl}}/assets/reveal/background/General.png" align="left" >
+	
+	<h3><font color="white">Team</font></h3>
+	<br>
+</section>
+<section data-background="{{site.baseurl}}/assets/reveal/background/Vide.png" align="left">
+	
+	<h3>{{ site.project_name }}</h3>
+	<br>
+	<p>{{ site.project_short_description }}</p>
+</section>
+<section data-background="{{site.baseurl}}/assets/reveal/background/Vide.png" align="left">
+<section data-markdown>
+	<textarea data-template>
+		## Page title <!-- .element: class="fragment" data-fragment-index="1" -->
+		### Sub-title <!-- .element: class="fragment" data-fragment-index="1" -->
+		#### Sub-sub-title maybe? <!-- .element: class="fragment" data-fragment-index="2" -->
+
+		<!-- .element: class="fragment" data-fragment-index="3" --> A paragraph with some text and a [link](http://hakim.se). 
+		
+		That's awsome
+	</textarea>
+</section>
+{% endraw %}

@@ -1,0 +1,43 @@
+{% raw %}
+<head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="{{ page.excerpt | default: site.project_short_description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta name="author" content="{{ page.author | default: site.full_name | strip_html | normalize_whitespace | truncate: 50 | escape }}">
+    <link rel="icon" href="http://via.placeholder.com/32x32" sizes="32x32">
+
+    <!-- The title is automatically defined according to the flask title -->
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.project_name | escape }}{% endif %}</title>
+    
+    <!-- Bootstrap core CSS online-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/custom.css">
+    
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+    
+
+    <!-- Bootstrap core CSS core (never been tested)-->
+    <!-- <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/node_modules/bootstrap/dist/css/bootstrap.css" media="screen,projection"/> -->
+
+
+    <!--Import Google Icon Font-->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    {% if jekyll.environment == 'production' and site.google_analytics %}
+    {% include google-analytics.html %}
+    {% endif %}
+    
+</head>
+{% endraw %}

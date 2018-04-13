@@ -1,0 +1,128 @@
+{% raw %}
+<!-- ++++++++++    NAVBAR   START    ++++++++++ -->
+    
+<header class="navbar navbar-expand navbar-light bg-light flex-column flex-md-row bd-navbar" style="box-shadow: 1px 1px 24px #AAA;">
+    
+    <!-- ~~~~~~~~    brand start    ~~~~~~~~ -->
+
+    <a class="navbar-brand" href="/"><img src="https://unsplash.it/32/32/?random" width="30" height="30" class="d-inline-block align-top" alt=""> {{site.project_name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- ~~~~~~~~    brand end    ~~~~~~~~ -->
+
+
+    <!-- ~~~~~~~~    menu start    ~~~~~~~~ -->
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+        <li class="nav-item">
+            <a class="nav-link " href="/" rel="noopener">Home</a>
+        </li>
+        {% if site.documentation %}
+        <li class="nav-item">
+            {% if site.documentation == "readthedocs" %}
+            <a class="nav-link" target="_blank" href="https://{{ site.project_slug | replace('_', '-') }}.readthedocs.io." rel="noopener">Documentation</a>
+            {% elsif site.documentation == "y" %}
+            <a class="nav-link" target="_blank" href="{{site.baseurl}}/docs/html/" rel="noopener">Documentation</a>
+            {% else %}
+            <a class="nav-link " target="_blank" href="{{site.documentation}}" rel="noopener">Documentation</a>
+            {% endif %}
+        </li>
+        {% endif %}
+        {% if site.tutorial %}
+        <li class="nav-item">
+            {% if site.tutorial == "y" %}
+            <a class="nav-link " href="{{site.baseurl}}/tutorial/" rel="noopener">Tutorials</a>
+            {% else %}
+            <a class="nav-link " href="{{site.tutorial}}" rel="noopener">Tutorials</a>
+            {% endif %}
+        </li>
+        {% endif %}
+        {% if site.tools %}
+        <li class="nav-item">
+            {% if site.tutorial == "y" %}
+            <a class="nav-link " href="{{site.baseurl}}/tutorial/" rel="noopener">Tools</a>
+            {% else %}
+            <a class="nav-link " href="{{site.tutorial}}" rel="noopener">Tools</a>
+            {% endif %}
+        </li>
+        {% endif %}
+        {% if site.dev_blog %}
+        <li class="nav-item">
+            {% if site.dev_blog == "y" %}
+            <a class="nav-link" href="{{site.baseurl}}/dev_blog/" rel="noopener">Blog</a>
+            {% else %}
+            <a class="nav-link " href="{{site.dev_blog}}" rel="noopener">Blog</a>
+            {% endif %}
+            
+        </li>
+        {% endif %}
+        
+        </ul>
+    </div>
+    <!-- ~~~~~~~~    menu end    ~~~~~~~~ -->
+
+
+    <!-- ~~~~~~~~    button start    ~~~~~~~~ -->
+    
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+        <!-- <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            v{{site.version}}
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+            <a class="dropdown-item active" href="../docs/4.0/">Latest (v{{site.version}})</a>
+            <a class="dropdown-item" href="#">v0 Alpha 2</a>
+        </div>
+        </li>
+        {% if site.twitter %}         
+        <li class="nav-item">
+            {% if site.twitter == y %}
+                {% include icon-twitter.html username=site.git_username class='nav-link p-2' %}
+            {% else %}
+                {% include icon-twitter.html username=site.twitter class='nav-link p-2' %}
+            {% endif %}
+        </li> -->
+        {% endif %}
+        {% if site.chat %}
+            <li class="nav-item">
+                <a class="nav-link p-2" 
+                    {% if site.chat == "gitter" %}
+                        href="https://gitter.im/{{ site.project_slug }}"
+                    {% elsif site.chat == "slack" %}
+                        href="https://{{ site.project_slug }}.slack.com/"
+                    {% else %}
+                        href="{{ site.chat }}"
+                    {% endif %}
+                target="_blank" rel="noopener" aria-label="chatroom">
+                    <i class="fa fa-comments" aria-hidden="true" title="chatroom"></i>
+                </a>
+            </li>
+        {% endif %}
+        {% if site.create_git %}
+        <li class="nav-item">
+        <a class="nav-link p-2" href="https://{{site.git_source}}/{{site.git_username}}/{{site.project_slug}}" target="_blank" rel="noopener" aria-label="git repo">
+            {% if site.git_source == "github.com" %}
+                <i class="fa fa-github fa-2" aria-hidden="true" title="git repo"></i>
+            {% elsif site.git_source == "innersource.soprasteria.com" %}
+                <i class="fa fa-code-fork fa-2" aria-hidden="true" title="git repo"></i>
+            {% endif %}
+        </a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
+        <a class="nav-link p-2 disabled" href="#" target="_blank" rel="noopener" aria-label=" ">
+            <i class=""> </i>
+            <!-- find icon here : http://fontawesome.io/icons/ -->
+        </a>
+        </li>
+    </ul>
+
+    <!-- <a class="btn btn-outline-warning" href="#">Download</a> -->
+    <!-- ~~~~~~~~    button start    ~~~~~~~~ -->
+
+    </header>
+
+<!-- ++++++++++    NAVBAR   END    ++++++++++ -->
+{% endraw %}

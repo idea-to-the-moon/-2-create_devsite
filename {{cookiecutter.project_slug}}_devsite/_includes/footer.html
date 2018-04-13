@@ -1,0 +1,169 @@
+{% raw %}
+<!-- ++++++++++    FOOTER   START    ++++++++++ -->
+<footer class="nb-footer">
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-12">
+            <div class="about">
+            <!-- <img src="http://via.placeholder.com/32x32" class="img-responsive center-block" alt=""> -->
+            <!-- <p>Bootstrap Footer example snippets with CSS, Javascript and HTML. Code example of bootstrap-3 footer using HTML, Javascript, jQuery, and CSS. 5 Beautiful and Responsive Footer Templates. Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p> -->
+            <div class="social-media">
+                <ul class="list-inline">
+                {% if site.facebook %}
+                <li class="list-inline-item">
+                  {% include icon-facebook.html username=site.git_username %}
+                </li>
+                {% endif %}
+                {% if site.twitter %}
+                <li class="list-inline-item">
+                    {% if site.twitter == y %}
+                        {% include icon-twitter.html username=site.git_username %}
+                    {% else %}
+                        {% include icon-twitter.html username=site.twitter %}
+                    {% endif %}
+                </li>
+                {% endif %}
+                {% if site.googleplus %}
+                <li class="list-inline-item">
+                    {% if site.googleplus == y %}
+                        {% include icon-googleplus.html username=site.git_username %}
+                    {% else %}
+                        {% include icon-googleplus.html username=site.googleplus %}
+                    {% endif %}
+                </li>
+                {% endif %}
+                {% if site.linkedin %}
+                <li class="list-inline-item">
+                    {% if site.linkedin == y %}
+                        {% include icon-linkedin.html username=site.git_username %}
+                    {% else %}
+                        {% include icon-linkedin.html username=site.linkedin %}
+                    {% endif %}
+                </li>
+                {% endif %}       
+                {% if site.youtube %}
+                <li class="list-inline-item">
+                    {% if site.youtube == y %}
+                        {% include icon-youtube.html username=site.git_username %}
+                    {% else %}
+                        {% include icon-youtube.html username=site.youtube %}
+                    {% endif %}
+                </li>
+                {% endif %}
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-0">
+            <br>
+        </div>
+        <!-- <div class="col-md-2 col-sm-6">
+            <div class="footer-info-single">
+                <h2 class="title">About us</h2>
+                <ul class="list-unstyled">
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Blog</a></li>
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Jobs</a></li>
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Press</a></li>
+                <li><a href="mailto:{{site.email}}" title=""><i class="fa fa-angle-double-right"></i> Contact us</a></li>              
+                </ul>
+            </div>
+        </div> -->
+        <!-- <div class="col-md-2 col-sm-6">
+            <div class="footer-info-single">
+                <h2 class="title">Product</h2>
+                <ul class="list-unstyled">
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> FAQ</a></li>
+                </ul>
+            </div>
+        </div>         -->
+        <!-- <div class="col-md-2 col-sm-6">
+            <div class="footer-info-single">
+            <h2 class="title">Developer</h2>
+            <ul class="list-unstyled">
+                {% if site.documentation %}
+                <li>
+                    {% if site.documentation == "readthedocs" %}
+                    <a target="_blank" href="https://{{ site.project_slug | replace('_', '-') }}.readthedocs.io." title="Documentation">
+                    {% elsif site.documentation == "y" %}
+                    <a target="_blank" href="{{site.baseurl}}/docs/html/" title="Documentation">
+                    {% else %}
+                    <a target="_blank" href="{{site.documentation}}" title="Documentation">
+                    {% endif %}
+                <i class="fa fa-angle-double-right"></i> Documentation</a></li>
+                {% endif %}
+                {% if site.chat %}
+                <li>
+                    {% if site.chat == "gitter" %}
+                    <a target="_blank" href="https://gitter.im/{{ site.project_slug }}" title="Chatroom">
+                    {% elsif site.chat == "slack" %}
+                    <a target="_blank" href="https://{{ site.project_slug }}.slack.com/" title="Chatroom">
+                    {% else %}
+                    <a target="_blank" href="{{site.chat}}" title="Chatroom">
+                    {% endif %}
+                <i class="fa fa-angle-double-right"></i> Chat</a></li>
+                {% endif %}
+                <li><a href="#" title=""><i class="fa fa-angle-double-right"></i> Forum</a></li>
+                {% if site.dev_blog %}
+                <li>
+                    {% if site.dev_blog == "y" %}
+                    <a target="" href="{{site.baseurl}}/dev_blog/" title=" Developer Blog">
+                    {% else %}
+                    <a target="" href="{{site.dev_blog}}" title=" Developer Blog">
+                    {% endif %}
+                <i class="fa fa-angle-double-right"></i> Developer Blog</a></li>
+                {% endif %}
+            </ul>
+            </div>
+        </div> -->
+        <div class="col-md-3 col-sm-6 animated fadeInRight">
+            <div class="footer-info-single">
+            <h2 class="title">Newsletter</h2>
+            <p>Leave your mail to be kept informed about this projet.</p>
+           
+              
+            <!-- Begin MailChimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+                #mc_embed_signup{background:rgba(0, 0, 0, 0); clear:left; font:14px Helvetica,Arial,sans-serif; }
+            </style>
+            <div id="mc_embed_signup">
+            <form action="{{site.embed_mailchimp}}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="adresse e-mail" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0e05192c2893bc841bc525ca4_16e7f330f0" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="s'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+              
+              
+         
+            </p>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-0">
+            <br>
+        </div>
+        </div>
+    </div>
+    <section class="copyright">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+            <p>2017 © All Rights Reserved.      
+            <!-- <a href="">Terms & Conditions</a> | <a href="">Privacy Policy</a> | <a href="">Cookies</a> -->
+            </p>
+            </div>
+            <div class="col-sm-6"></div>
+        </div>
+        </div>
+    </section>
+    </footer>
+
+
+<!-- ++++++++++    FOOTER   END    ++++++++++ -->
+{% endraw %}
